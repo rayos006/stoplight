@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>Stoplight</title>
+  </header>
+  <style>
+    .dot {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .red {
+      background-color: rgb(169, 9, 9);
+    }
+    .yellow {
+      background-color: rgb(244, 236, 15);
+    }
+    .green {
+      background-color: rgb(10, 121, 20);
+    }
+    .off {
+      background-color: rgb(255, 255, 255);
+    }
+  </style>
+
+  <body>
+    <h3>Welcome to the Stoplight!</h3>
+    <br />
+    <!-- Buttons to change state manually -->
+    <a href="/off"><button>Off</button></a>
+    <br />
+    <a href="/red"><button>Red</button></a>
+    <br />
+    <a href="/yellow"><button>Yellow</button></a>
+    <br />
+    <a href="/green"><button>Green</button></a>
+    <br />
+    <!-- Button to start cycle of lights -->
+    <a href="/run"><button>Run Light</button></a>
+    <br />
+    <br />
+    <!-- Current state of light -->
+    <span class="{{ status }} dot"></span>
+  </body>
+</html>
