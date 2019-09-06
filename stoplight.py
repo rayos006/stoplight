@@ -1,8 +1,8 @@
 from gpiozero import LED
 
-red = LED(17)
-green = LED(17)
-yellow = LED(17)
+led_red = LED(17)
+led_green = LED(22)
+led_yellow = LED(27)
 
 
 def off():
@@ -11,9 +11,9 @@ def off():
         Returns:
         """
     print('LED OFF')
-    red.off()
-    yellow.off()
-    green.off()
+    led_red.off()
+    led_yellow.off()
+    led_green.off()
 
     return
 
@@ -24,7 +24,9 @@ def red():
         Returns:
         """
     print('LED RED')
-    red.on()
+    led_yellow.off()
+    led_green.off()
+    led_red.on()
 
     return
 
@@ -35,7 +37,9 @@ def yellow():
         Returns:
         """
     print('LED YELLOW')
-    yellow.on()
+    led_green.off()
+    led_red.off()
+    led_yellow.on()
     return
 
 
@@ -45,6 +49,8 @@ def green():
        Returns:
        """
     print('LED GREEN')
-    green.on()
+    led_red.off()
+    led_yellow.off()
+    led_green.on()
 
     return
