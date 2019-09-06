@@ -1,42 +1,50 @@
+from gpiozero import LED
 
-import logging
+red = LED(17)
+green = LED(17)
+yellow = LED(17)
 
 
 def off():
-    """ Changes led to off
-       Args:
-       Returns:
-       """
+    """ Changes all leds to off
+        Args:
+        Returns:
+        """
     print('LED OFF')
+    red.off()
+    yellow.off()
+    green.off()
 
     return
 
 
 def red():
-    """ Changes led to off
-       Args:
-       Returns:
-       """
+    """ Changes red led to on
+        Args:
+        Returns:
+        """
     print('LED RED')
+    red.on()
 
     return
 
 
 def yellow():
-    """ Changes led to off
-       Args:
-       Returns:
-       """
+    """ Changes yellow led to on
+        Args:
+        Returns:
+        """
     print('LED YELLOW')
-
+    yellow.on()
     return
 
 
 def green():
-    """ Changes led to off
+    """ Changes green led to on
        Args:
        Returns:
        """
     print('LED GREEN')
+    green.on()
 
     return
